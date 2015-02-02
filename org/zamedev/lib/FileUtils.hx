@@ -2,6 +2,9 @@ package org.zamedev.lib;
 
 using StringTools;
 
+// TODO: haxe.io.Path ?
+// TODO: sys.FileSystem.absPath | sys.FileSystem.fullPath ?
+
 class FileUtils {
 	public static function dirname(path:String, appendSeparator:Bool=false):String {
 		return (~/\//.match(path) ? (~/\/[^\/]+$/.replace(path, "") + (appendSeparator ? "/" : "")) : "");
