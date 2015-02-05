@@ -2,18 +2,18 @@ package org.zamedev.lib;
 
 using StringTools;
 
-// TODO: haxe.io.Path ?
-// TODO: sys.FileSystem.absPath | sys.FileSystem.fullPath ?
-
 class FileUtils {
+	// deprecated, use haxe.io.Path.directory() instead
 	public static function dirname(path:String, appendSeparator:Bool=false):String {
 		return (~/\//.match(path) ? (~/\/[^\/]+$/.replace(path, "") + (appendSeparator ? "/" : "")) : "");
 	}
 
+	// deprecated, use haxe.io.Path.extension() instead
 	public static function ext(path:String, leaveDot:Bool=true):String {
 		return ~/^.+\./.replace(path, leaveDot ? "." : "");
 	}
 
+	// deprecatd, use haxe.io.Path.normalize() instead
 	public static function normalize(basePath:String, path:String):String {
 		basePath = dirname(basePath);
 
